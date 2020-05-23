@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LeaveSystem.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,8 @@ namespace LeaveSystem.Controllers
 {
     public class LeaveTypeController : Controller
     {
+
+        private readonly ILeaveTypeRepo _repo;
         // GET: LeaveType
         public ActionResult Index()
         {

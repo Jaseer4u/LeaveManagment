@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LeaveSystem.Repository
 {
-    public class LeaveTypeRepo : ILeaveType
+    public class LeaveTypeRepo : ILeaveTypeRepo
     {
         private readonly ApplicationDbContext _db;
 

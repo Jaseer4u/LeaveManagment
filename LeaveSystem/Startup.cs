@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using LeaveSystem.Mapper;
 
 namespace LeaveSystem
 {
@@ -39,7 +41,10 @@ namespace LeaveSystem
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString")));
 
-            services.AddScoped<ILeaveType, LeaveTypeRepo>();
+
+            services.AddAutoMapper(typeof(AutoMapperVM));
+
+            services.AddScoped<ILeaveTypeRepo, LeaveTypeRepo>();
             services.AddScoped<ILeaveHistory, LeaveHistoryRepo>();
             services.AddScoped<ILeaveAllocations, LeaveAllocationsRepo>();
 
