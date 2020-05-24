@@ -14,7 +14,7 @@ namespace LeaveSystem.Repository
 
         public LeaveHistoryRepo(ApplicationDbContext db)
         {
-            db = this._db;
+            _db = db;
         }
         public bool Create(LeaveHistory entity)
         {
@@ -28,7 +28,7 @@ namespace LeaveSystem.Repository
             return Save();
         }
 
-        public IList<LeaveHistory> FindAll()
+        public ICollection<LeaveHistory> FindAll()
         {
             return _db.LeaveHistory.ToList();
         }

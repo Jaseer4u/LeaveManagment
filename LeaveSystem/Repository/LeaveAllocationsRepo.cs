@@ -14,7 +14,7 @@ namespace LeaveSystem.Repository
 
         public LeaveAllocationsRepo(ApplicationDbContext db)
         {
-            db = this._db;
+            _db = db;
         }
         public bool Create(LeaveAllocations entity)
         {
@@ -28,7 +28,7 @@ namespace LeaveSystem.Repository
             return Save();
         }
 
-        public IList<LeaveAllocations> FindAll()
+        public ICollection<LeaveAllocations> FindAll()
         {
             return _db.LeaveAllocations.ToList();
         }

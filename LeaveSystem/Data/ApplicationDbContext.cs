@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LeaveSystem.Models;
 
 namespace LeaveSystem.Data
 {
@@ -17,5 +18,6 @@ namespace LeaveSystem.Data
         public DbSet<LeaveType> LeaveType { get; set; }
         public DbSet<LeaveHistory> LeaveHistory { get; set; }
         public DbSet<LeaveAllocations> LeaveAllocations { get; set; }
+        public DbSet<LeaveSystem.Models.LeaveTypeVM> LeaveTypeVM { get; set; }
     }
 }

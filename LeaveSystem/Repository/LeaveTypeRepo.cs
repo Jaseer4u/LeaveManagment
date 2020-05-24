@@ -12,7 +12,7 @@ namespace LeaveSystem.Repository
 
         public LeaveTypeRepo(ApplicationDbContext db)
         {
-            db = this._db;
+            _db = db;
         }
 
         public bool Create(LeaveType entity)
@@ -27,7 +27,7 @@ namespace LeaveSystem.Repository
             return Save();
         }
 
-        public IList<LeaveType> FindAll()
+        public ICollection<LeaveType> FindAll()
         {
             return _db.LeaveType.ToList();
         }

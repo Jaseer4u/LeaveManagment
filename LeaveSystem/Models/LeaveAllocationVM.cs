@@ -14,7 +14,7 @@ namespace LeaveSystem.Models
         public EmployeeVM employee { get; set; }
         public int EmployeeId { get; set; }
         
-        public DetailsLeaveTypeVM leaveType { get; set; }
+        public LeaveTypeVM leaveType { get; set; }
         public int LeaveTypeId { get; set; }
     }
 }

@@ -13,8 +13,8 @@ namespace LeaveSystem.Mapper
     {
         public AutoMapperVM()
         {
-            CreateMap<DetailsLeaveTypeVM, LeaveType>().ReverseMap();
-            CreateMap<CreateLeaveTypeVM, LeaveType>().ReverseMap();
+            CreateMap<LeaveTypeVM, LeaveType>().ReverseMap();
+            
         }
     }
 }

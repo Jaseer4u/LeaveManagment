@@ -7,7 +7,7 @@ namespace LeaveSystem.Interface
 {
     public interface IRepositoryBase<T> where T: class
     {
-        IList<T> FindAll();
+        ICollection<T> FindAll();
         T GetByID(int ID);
         bool Create(T entity);
         bool Update(T entity);
